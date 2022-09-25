@@ -1,0 +1,5 @@
+mode: set
+github.com/amanyadavsde/GOTEST/bot/bot_arithmetic.go:3.39,7.2 1 1
+github.com/amanyadavsde/GOTEST/bot/bot_parity_checker.go:5.29,6.16 1 1
+github.com/amanyadavsde/GOTEST/bot/bot_parity_checker.go:6.16,8.3 1 1
+github.com/amanyadavsde/GOTEST/bot/bot_parity_checker.go:8.8,10.3 1 0
