@@ -2,4 +2,4 @@
 contains go test demo
 
 1) please clone the repo.
-2) run sh servicetest.sh
+2) run sh service_tests.sh
