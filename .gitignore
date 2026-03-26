@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+frontend/dist/
+
+# Secrets — NEVER commit this
+backend/.env
+
+# Go binary
+backend/workspace-insights-demo
+
+# OS files
+.DS_Store
