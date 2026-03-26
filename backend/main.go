@@ -52,13 +52,16 @@ var (
 	// The access token is long-lived.
 	clickupClientID     string
 	clickupClientSecret string
-	clickupRedirectURI  = "http://localhost:3001/auth/clickup/callback"
+	clickupRedirectURI  string
+	backendURL          string
 )
 
 func main() {
 	_ = godotenv.Load()
 
 	frontendURL = envOrDefault("FRONTEND_URL", "http://localhost:5173")
+	backendURL = envOrDefault("BACKEND_URL", "http://localhost:3001")
+	clickupRedirectURI = backendURL + "/auth/clickup/callback"
 
 	// Configure the OAuth2 client.
 	// client_id and client_secret come from Google Cloud Console.
@@ -66,7 +69,7 @@ func main() {
 	googleOAuth = &oauth2.Config{
 		ClientID:     os.Getenv("GOOGLE_CLIENT_ID"),
 		ClientSecret: os.Getenv("GOOGLE_CLIENT_SECRET"),
-		RedirectURL:  "http://localhost:3001/auth/google/callback",
+		RedirectURL:  backendURL + "/auth/google/callback",
 		Scopes: []string{
 			"openid",
 			"https://www.googleapis.com/auth/userinfo.profile",
